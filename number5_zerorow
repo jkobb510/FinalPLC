@@ -1,0 +1,15 @@
+//java
+
+for (int i = 1; i <= n; i++) {
+      boolean ZeroRow=true;
+      for (int j = 1; j <= n; j++) {
+          if (x[i][j] != 0){
+          ZeroRow=false;
+          break;
+          }
+}
+if (ZeroRow){
+println ("First all-zero row is:", i);
+break;
+     }
+}
