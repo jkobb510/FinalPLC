@@ -14,8 +14,8 @@ public class nestedmax_mid_min {
 		int max, min, mid;
 		
 		//combinations from low to high (third, second, first)(third, first, second) 
-		//								              (second, third, first)(second, first, third)
-		//						              		(first, second, third) (first, third, second)
+		//		                (second, third, first)(second, first, third)
+		//				(first, second, third) (first, third, second)
 		
 		
 		if(third<second && third<first) {
