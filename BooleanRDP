@@ -16,7 +16,7 @@ public class RecursiveDescentParser {
     while (comp_op == Lexer.OR) {
       Or or = new Or();
       or.setLeft(root);
-      term();
+      Boolean_term();
       or.setRight(root);
       root = or;
     }
@@ -26,7 +26,7 @@ public class RecursiveDescentParser {
     while (comp_op == Lexer.AND) {
       And and = new And();
       and.setLeft(root);
-      factor();
+      Boolean_factor();
       and.setRight(root);
       root = and;
     }
@@ -41,11 +41,11 @@ public class RecursiveDescentParser {
       comp_op = lexer.nextSymbol();
     } else if (comp_op == Lexer.NOT) {
       Not not = new Not();
-      factor();
+      Boolean_factor();
       not.setChild(root);
       root = not;
     } else if (symbol == Lexer.LEFT) {
-      expression();
+      Boolean_expression();
       comp_op = lexer.nextSymbol(); 
     } else {
       throw new RuntimeException("Error");
