@@ -22,7 +22,7 @@ public class RecursiveDescentParser {
     }
   }
   private void Boolean_term() {
-    factor();
+    Boolean_factor();
     while (comp_op == Lexer.AND) {
       And and = new And();
       and.setLeft(root);
