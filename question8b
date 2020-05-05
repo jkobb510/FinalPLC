@@ -8,7 +8,6 @@ for( i = 0 ; i < 3 ; i++ ){
         }
     else{
         j = 0;
-        }
      }
     if( j > 0 ) goto label
     j = 3 - i;
